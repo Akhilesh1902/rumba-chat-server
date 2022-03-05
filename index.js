@@ -6,15 +6,16 @@ const cors = require("cors");
 const { get_curretn_user, user_disconect, join_user } = require("./user");
 const { join } = require("path");
 
+// app.use(express.static(__dirname + "../build"));
 app.use(cors());
 
-const port = process.env.port || 4000;
+const port = process.env.PORT || 4000;
 
 const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:3000",
+    origin: "https://rumba-chat.netlify.app/",
     methods: ["GET", "post"],
   },
 });
