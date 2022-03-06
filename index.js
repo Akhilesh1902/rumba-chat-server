@@ -5,6 +5,7 @@ const { Server } = require("socket.io");
 const cors = require("cors");
 const { get_curretn_user, user_disconect, join_user } = require("./user");
 const { join } = require("path");
+require("dotenv").config();
 
 // app.use(express.static(__dirname + "../build"));
 app.use(cors());
