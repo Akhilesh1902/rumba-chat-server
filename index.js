@@ -9,7 +9,11 @@ const { join } = require("path");
 // app.use(express.static(__dirname + "../build"));
 app.use(cors());
 
-const port = process.env.PORT || 4000;
+const port = process.env.PORT;
+
+app.get("/", (req, res) => {
+  res.send("in home page");
+});
 
 const server = http.createServer(app);
 
