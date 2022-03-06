@@ -15,7 +15,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: "https://rumba-chat.netlify.app/",
+    origin: "https://rumba-chat.netlify.app",
     methods: ["GET", "post"],
   },
 });
